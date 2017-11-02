@@ -1,0 +1,14 @@
+--cpu Cortex-M0+
+".\objects\debug.o"
+".\objects\gpio.o"
+".\objects\main.o"
+".\objects\udc.o"
+".\objects\usb.o"
+".\objects\usb_descriptors.o"
+".\objects\startup_samd21.o"
+".\objects\startup_samd21_1.o"
+".\objects\system_samd21.o"
+--strict --scatter ".\Objects\test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\test.map" -o .\Objects\test.axf
